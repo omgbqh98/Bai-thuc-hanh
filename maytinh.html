@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>caculator</h2>
+<input id="n1" type="text" placeholder="nhap number1">
+<input id="n2" type="text" placeholder="nhap number2">
+<button id="on1" onclick="myFunction1()">+</button>
+<button id="on2" onclick="myFunction2()">-</button>
+<button id="on3" onclick="myFunction3()">*</button>
+<button id="on4" onclick="myFunction4()">/</button>
+ket qua: <input id="ketqua" type="text">
+<script>
+    function myFunction1(){
+        let number1 = document.getElementById('n1').value;
+        let number2 = document.getElementById('n2').value;
+        let on1 =document.getElementById('on1').value;
+         let ketqua = parseInt(number1) + parseInt(number2) ;
+        document.getElementById('ketqua').value = ketqua;
+    }
+    function myFunction2() {
+        let number1 = document.getElementById('n1').value;
+        let number2 = document.getElementById('n2').value;
+        let on1 = document.getElementById('on1').value;
+        let ketqua = parseInt(number1) - parseInt(number2);
+        document.getElementById('ketqua').value = ketqua;
+    }
+    function myFunction3() {
+        let number1 = document.getElementById('n1').value;
+        let number2 = document.getElementById('n2').value;
+        let on1 = document.getElementById('on1').value;
+        let ketqua = parseInt(number1) * parseInt(number2);
+        document.getElementById('ketqua').value = ketqua;
+    }
+    function myFunction4() {
+        let number1 = document.getElementById('n1').value;
+        let number2 = document.getElementById('n2').value;
+        let on1 = document.getElementById('on1').value;
+        let ketqua = parseInt(number1) / parseInt(number2);
+        document.getElementById('ketqua').value = ketqua;
+    }
+
+
+</script>
+</body>
+</html>
