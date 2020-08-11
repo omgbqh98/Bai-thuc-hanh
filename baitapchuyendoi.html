@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien</title>
+</head>
+<body>
+<form >
+    <table>
+        <tr>
+            <th><h2>Amount</h2>
+            <th></th>
+
+            <th><h2>from currency</h2></th>
+            <th></th>
+            <th> <h2 >to currency</h2> </th>
+        </tr>
+        <tr>
+            <td> <input type="number" id="input1" placeholder="nhap so tien"></td>
+            <td width="200"></td>
+            <td> <select id="select1" name="huynh" >
+                <option value="vn">vietnam</option>
+                <option value="tl">thailand</option>
+                <option value="la">laos</option>
+            </select></td>
+            <td width="200"></td>
+            <td><select  name="" id="select2">
+                <option value="usd">usd</option>
+                <option value="er">euro</option>
+                <option value="rl">ruple</option></select>
+            </td>
+            <td><input type="button" value="convert" onclick="myFunction()"></input></td>
+        </tr>
+        <br>
+        ket qua : <input type="text" id="ketqua">
+        <script>
+            function myFunction(){
+                let sotien =document.getElementById('input1').value;
+                let select1 = document.getElementById('select1').value;
+                let select2 =document.getElementById('select2').value;
+               // let ketqua= document.getElementById('ketqua').value;
+                if(select2 =='usd'&& select1 == 'vn'){
+                    ketqua= sotien * 23000;
+            }else if(select1 == 'vn' && select2== 'er'){
+                    ketqua = sotien * 26000;
+                }else{
+                    alert("ko biet lam")
+                    confirm("ban tu tinh nha")
+                }
+
+                document.getElementById('ketqua').value = ketqua;
+
+            }
+
+        </script>
+
+
+    </table>
+
+</form>
+</body>
+</html>
